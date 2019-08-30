@@ -4,25 +4,25 @@
 #
 Name     : mvn-maven-bundle-plugin
 Version  : 2.3.4
-Release  : 2
+Release  : 3
 URL      : https://repo1.maven.org/maven2/org/apache/felix/maven-bundle-plugin/2.3.4/maven-bundle-plugin-2.3.4.jar
 Source0  : https://repo1.maven.org/maven2/org/apache/felix/maven-bundle-plugin/2.3.4/maven-bundle-plugin-2.3.4.jar
-Source1  : https://repo1.maven.org/maven2/org/apache/felix/maven-bundle-plugin/2.3.4/maven-bundle-plugin-2.3.4.pom
-Source2  : https://repo1.maven.org/maven2/org/apache/felix/maven-bundle-plugin/2.4.0/maven-bundle-plugin-2.4.0.jar
-Source3  : https://repo1.maven.org/maven2/org/apache/felix/maven-bundle-plugin/2.4.0/maven-bundle-plugin-2.4.0.pom
-Source4  : https://repo1.maven.org/maven2/org/apache/felix/maven-bundle-plugin/2.5.0/maven-bundle-plugin-2.5.0.jar
-Source5  : https://repo1.maven.org/maven2/org/apache/felix/maven-bundle-plugin/2.5.0/maven-bundle-plugin-2.5.0.pom
-Source6  : https://repo1.maven.org/maven2/org/apache/felix/maven-bundle-plugin/2.5.4/maven-bundle-plugin-2.5.4.jar
-Source7  : https://repo1.maven.org/maven2/org/apache/felix/maven-bundle-plugin/2.5.4/maven-bundle-plugin-2.5.4.pom
-Source8  : https://repo1.maven.org/maven2/org/apache/felix/maven-bundle-plugin/3.0.1/maven-bundle-plugin-3.0.1.jar
-Source9  : https://repo1.maven.org/maven2/org/apache/felix/maven-bundle-plugin/3.0.1/maven-bundle-plugin-3.0.1.pom
+Source1  : https://repo1.maven.org/maven2/org/apache/felix/maven-bundle-plugin/2.1.0/maven-bundle-plugin-2.1.0.jar
+Source2  : https://repo1.maven.org/maven2/org/apache/felix/maven-bundle-plugin/2.1.0/maven-bundle-plugin-2.1.0.pom
+Source3  : https://repo1.maven.org/maven2/org/apache/felix/maven-bundle-plugin/2.3.4/maven-bundle-plugin-2.3.4.pom
+Source4  : https://repo1.maven.org/maven2/org/apache/felix/maven-bundle-plugin/2.4.0/maven-bundle-plugin-2.4.0.jar
+Source5  : https://repo1.maven.org/maven2/org/apache/felix/maven-bundle-plugin/2.4.0/maven-bundle-plugin-2.4.0.pom
+Source6  : https://repo1.maven.org/maven2/org/apache/felix/maven-bundle-plugin/2.5.0/maven-bundle-plugin-2.5.0.jar
+Source7  : https://repo1.maven.org/maven2/org/apache/felix/maven-bundle-plugin/2.5.0/maven-bundle-plugin-2.5.0.pom
+Source8  : https://repo1.maven.org/maven2/org/apache/felix/maven-bundle-plugin/2.5.4/maven-bundle-plugin-2.5.4.jar
+Source9  : https://repo1.maven.org/maven2/org/apache/felix/maven-bundle-plugin/2.5.4/maven-bundle-plugin-2.5.4.pom
+Source10  : https://repo1.maven.org/maven2/org/apache/felix/maven-bundle-plugin/3.0.1/maven-bundle-plugin-3.0.1.jar
+Source11  : https://repo1.maven.org/maven2/org/apache/felix/maven-bundle-plugin/3.0.1/maven-bundle-plugin-3.0.1.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0 MIT
 Requires: mvn-maven-bundle-plugin-data = %{version}-%{release}
 Requires: mvn-maven-bundle-plugin-license = %{version}-%{release}
-BuildRequires : apache-maven
-BuildRequires : buildreq-mvn
 
 %description
 No detailed description available
@@ -56,32 +56,38 @@ cp NOTICE %{buildroot}/usr/share/package-licenses/mvn-maven-bundle-plugin/NOTICE
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/felix/maven-bundle-plugin/2.3.4
 cp %{SOURCE0} %{buildroot}/usr/share/java/.m2/repository/org/apache/felix/maven-bundle-plugin/2.3.4/maven-bundle-plugin-2.3.4.jar
 
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/felix/maven-bundle-plugin/2.1.0
+cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/org/apache/felix/maven-bundle-plugin/2.1.0/maven-bundle-plugin-2.1.0.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/felix/maven-bundle-plugin/2.1.0
+cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/apache/felix/maven-bundle-plugin/2.1.0/maven-bundle-plugin-2.1.0.pom
+
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/felix/maven-bundle-plugin/2.3.4
-cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/org/apache/felix/maven-bundle-plugin/2.3.4/maven-bundle-plugin-2.3.4.pom
+cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/apache/felix/maven-bundle-plugin/2.3.4/maven-bundle-plugin-2.3.4.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/felix/maven-bundle-plugin/2.4.0
-cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/apache/felix/maven-bundle-plugin/2.4.0/maven-bundle-plugin-2.4.0.jar
+cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/org/apache/felix/maven-bundle-plugin/2.4.0/maven-bundle-plugin-2.4.0.jar
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/felix/maven-bundle-plugin/2.4.0
-cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/apache/felix/maven-bundle-plugin/2.4.0/maven-bundle-plugin-2.4.0.pom
+cp %{SOURCE5} %{buildroot}/usr/share/java/.m2/repository/org/apache/felix/maven-bundle-plugin/2.4.0/maven-bundle-plugin-2.4.0.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/felix/maven-bundle-plugin/2.5.0
-cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/org/apache/felix/maven-bundle-plugin/2.5.0/maven-bundle-plugin-2.5.0.jar
+cp %{SOURCE6} %{buildroot}/usr/share/java/.m2/repository/org/apache/felix/maven-bundle-plugin/2.5.0/maven-bundle-plugin-2.5.0.jar
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/felix/maven-bundle-plugin/2.5.0
-cp %{SOURCE5} %{buildroot}/usr/share/java/.m2/repository/org/apache/felix/maven-bundle-plugin/2.5.0/maven-bundle-plugin-2.5.0.pom
+cp %{SOURCE7} %{buildroot}/usr/share/java/.m2/repository/org/apache/felix/maven-bundle-plugin/2.5.0/maven-bundle-plugin-2.5.0.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/felix/maven-bundle-plugin/2.5.4
-cp %{SOURCE6} %{buildroot}/usr/share/java/.m2/repository/org/apache/felix/maven-bundle-plugin/2.5.4/maven-bundle-plugin-2.5.4.jar
+cp %{SOURCE8} %{buildroot}/usr/share/java/.m2/repository/org/apache/felix/maven-bundle-plugin/2.5.4/maven-bundle-plugin-2.5.4.jar
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/felix/maven-bundle-plugin/2.5.4
-cp %{SOURCE7} %{buildroot}/usr/share/java/.m2/repository/org/apache/felix/maven-bundle-plugin/2.5.4/maven-bundle-plugin-2.5.4.pom
+cp %{SOURCE9} %{buildroot}/usr/share/java/.m2/repository/org/apache/felix/maven-bundle-plugin/2.5.4/maven-bundle-plugin-2.5.4.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/felix/maven-bundle-plugin/3.0.1
-cp %{SOURCE8} %{buildroot}/usr/share/java/.m2/repository/org/apache/felix/maven-bundle-plugin/3.0.1/maven-bundle-plugin-3.0.1.jar
+cp %{SOURCE10} %{buildroot}/usr/share/java/.m2/repository/org/apache/felix/maven-bundle-plugin/3.0.1/maven-bundle-plugin-3.0.1.jar
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/felix/maven-bundle-plugin/3.0.1
-cp %{SOURCE9} %{buildroot}/usr/share/java/.m2/repository/org/apache/felix/maven-bundle-plugin/3.0.1/maven-bundle-plugin-3.0.1.pom
+cp %{SOURCE11} %{buildroot}/usr/share/java/.m2/repository/org/apache/felix/maven-bundle-plugin/3.0.1/maven-bundle-plugin-3.0.1.pom
 
 
 %files
@@ -89,6 +95,8 @@ cp %{SOURCE9} %{buildroot}/usr/share/java/.m2/repository/org/apache/felix/maven-
 
 %files data
 %defattr(-,root,root,-)
+/usr/share/java/.m2/repository/org/apache/felix/maven-bundle-plugin/2.1.0/maven-bundle-plugin-2.1.0.jar
+/usr/share/java/.m2/repository/org/apache/felix/maven-bundle-plugin/2.1.0/maven-bundle-plugin-2.1.0.pom
 /usr/share/java/.m2/repository/org/apache/felix/maven-bundle-plugin/2.3.4/maven-bundle-plugin-2.3.4.jar
 /usr/share/java/.m2/repository/org/apache/felix/maven-bundle-plugin/2.3.4/maven-bundle-plugin-2.3.4.pom
 /usr/share/java/.m2/repository/org/apache/felix/maven-bundle-plugin/2.4.0/maven-bundle-plugin-2.4.0.jar
