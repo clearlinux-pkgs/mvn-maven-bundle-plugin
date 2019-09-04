@@ -4,7 +4,7 @@
 #
 Name     : mvn-maven-bundle-plugin
 Version  : 2.3.4
-Release  : 3
+Release  : 4
 URL      : https://repo1.maven.org/maven2/org/apache/felix/maven-bundle-plugin/2.3.4/maven-bundle-plugin-2.3.4.jar
 Source0  : https://repo1.maven.org/maven2/org/apache/felix/maven-bundle-plugin/2.3.4/maven-bundle-plugin-2.3.4.jar
 Source1  : https://repo1.maven.org/maven2/org/apache/felix/maven-bundle-plugin/2.1.0/maven-bundle-plugin-2.1.0.jar
@@ -18,11 +18,15 @@ Source8  : https://repo1.maven.org/maven2/org/apache/felix/maven-bundle-plugin/2
 Source9  : https://repo1.maven.org/maven2/org/apache/felix/maven-bundle-plugin/2.5.4/maven-bundle-plugin-2.5.4.pom
 Source10  : https://repo1.maven.org/maven2/org/apache/felix/maven-bundle-plugin/3.0.1/maven-bundle-plugin-3.0.1.jar
 Source11  : https://repo1.maven.org/maven2/org/apache/felix/maven-bundle-plugin/3.0.1/maven-bundle-plugin-3.0.1.pom
+Source12  : https://repo1.maven.org/maven2/org/apache/felix/maven-bundle-plugin/3.2.0/maven-bundle-plugin-3.2.0.jar
+Source13  : https://repo1.maven.org/maven2/org/apache/felix/maven-bundle-plugin/3.2.0/maven-bundle-plugin-3.2.0.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0 MIT
 Requires: mvn-maven-bundle-plugin-data = %{version}-%{release}
 Requires: mvn-maven-bundle-plugin-license = %{version}-%{release}
+BuildRequires : apache-maven
+BuildRequires : buildreq-mvn
 
 %description
 No detailed description available
@@ -89,6 +93,12 @@ cp %{SOURCE10} %{buildroot}/usr/share/java/.m2/repository/org/apache/felix/maven
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/felix/maven-bundle-plugin/3.0.1
 cp %{SOURCE11} %{buildroot}/usr/share/java/.m2/repository/org/apache/felix/maven-bundle-plugin/3.0.1/maven-bundle-plugin-3.0.1.pom
 
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/felix/maven-bundle-plugin/3.2.0
+cp %{SOURCE12} %{buildroot}/usr/share/java/.m2/repository/org/apache/felix/maven-bundle-plugin/3.2.0/maven-bundle-plugin-3.2.0.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/felix/maven-bundle-plugin/3.2.0
+cp %{SOURCE13} %{buildroot}/usr/share/java/.m2/repository/org/apache/felix/maven-bundle-plugin/3.2.0/maven-bundle-plugin-3.2.0.pom
+
 
 %files
 %defattr(-,root,root,-)
@@ -107,6 +117,8 @@ cp %{SOURCE11} %{buildroot}/usr/share/java/.m2/repository/org/apache/felix/maven
 /usr/share/java/.m2/repository/org/apache/felix/maven-bundle-plugin/2.5.4/maven-bundle-plugin-2.5.4.pom
 /usr/share/java/.m2/repository/org/apache/felix/maven-bundle-plugin/3.0.1/maven-bundle-plugin-3.0.1.jar
 /usr/share/java/.m2/repository/org/apache/felix/maven-bundle-plugin/3.0.1/maven-bundle-plugin-3.0.1.pom
+/usr/share/java/.m2/repository/org/apache/felix/maven-bundle-plugin/3.2.0/maven-bundle-plugin-3.2.0.jar
+/usr/share/java/.m2/repository/org/apache/felix/maven-bundle-plugin/3.2.0/maven-bundle-plugin-3.2.0.pom
 
 %files license
 %defattr(0644,root,root,0755)
